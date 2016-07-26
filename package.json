@@ -1,0 +1,15 @@
+{
+  "name": "angular-part-2",
+  "version": "1.0.0",
+  "description": "Homework for Binary Studio Academy 2016/JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrii Khanchuk",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
