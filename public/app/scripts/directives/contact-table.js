@@ -4,13 +4,15 @@ angular
       return {
         restrict: 'E',
         replace: true,
-        scope:{
-          arr: '='
-        },
+
         templateUrl: '../../static/app/templates/contact-table.html',
         controller: 'MainCtrl',
         link: function(scope, element, attrs) {
-          //console.log(scope.arr[0]);
+            scope.deleteItem = function(id){
+              scope.contactList.splice(id, 1);
+              console.table(scope.contactList);
+        };
+
         }
     }
   });

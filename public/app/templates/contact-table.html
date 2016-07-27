@@ -10,7 +10,7 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody class="contact-data" ng-repeat="el in arr track by $index">
+    <tbody class="contact-data" ng-repeat="el in contactList track by $index">
       <tr id="{{$index}}">
           <td><input type="text" value={{el.firstName}} /></td>
           <td><input type="text" value={{el.lastName}} /></td>
