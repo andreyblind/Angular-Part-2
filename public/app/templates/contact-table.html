@@ -1,1 +1,20 @@
-<p>contact table {{2+2}}</p>
+
+<div class="container">
+  <h2>Contact List</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="el in arr">
+        <td>{{el.firstName}}</td>
+        <td>{{el.lastName}}</td>
+        <td>{{el.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
