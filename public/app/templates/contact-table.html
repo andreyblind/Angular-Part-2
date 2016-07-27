@@ -15,7 +15,8 @@
           <td><input type="text" value={{el.firstName}} /></td>
           <td><input type="text" value={{el.lastName}} /></td>
           <td><input type="text" value={{el.email}} /></td>
-          <td><button  ng-click="deleteItem($index)">delete</button></td>
+          
+          <td><span class="glyphicon glyphicon-trash" ng-click="deleteItem($index)"></span></td>
       </tr>
     </tbody>
   </table>
