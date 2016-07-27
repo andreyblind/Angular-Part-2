@@ -1,13 +1,15 @@
 angular
-    .module('contactListApp', [])
-    .directive('contactTable', contactTable)
-    function contactTable($window) {
-        return {
-            restrict: 'E',
-            transclude: true,
-            link: function(scope, element, attrs) {
-
-            },
-            template: '<p>test succes</p>'
-        };
+    .module('contactListApp')
+    .directive('contactTable', function(){
+      return {
+        restrict: 'E',
+        replace: true,
+        scope:{
+          arr: '='
+        },
+        templateUrl: '../../static/app/templates/contact-table.html',
+        link: function(scope, element, attrs) {
+          console.log(scope.arr);
+        }
     }
+  });
