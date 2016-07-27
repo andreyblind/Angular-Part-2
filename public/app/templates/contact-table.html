@@ -7,14 +7,18 @@
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
+        <th>Actions</th>
       </tr>
     </thead>
-    <tbody>
-      <tr class="contact-data" ng-repeat="el in arr">
+    <tbody class="contact-data" ng-repeat="el in arr track by $index">
+      <tr id="{{$index}}">
           <td><input type="text" value={{el.firstName}} /></td>
           <td><input type="text" value={{el.lastName}} /></td>
           <td><input type="text" value={{el.email}} /></td>
+          <td><button  ng-click="deleteItem($index)">delete</button></td>
       </tr>
     </tbody>
   </table>
+
 </div>
+

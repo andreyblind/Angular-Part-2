@@ -12,5 +12,10 @@ angular
         {firstName: 'Ибрагим', lastName: 'Оглы', email: 'i.ogly@mail.ru'},
         {firstName: 'Джон', lastName: 'Сноу', email: 'bastard@gmail.com'},
         {firstName: 'Конор', lastName: 'Макгрегор', email: 'conor@ufc.com'},
-    ]
+    ];
+    $scope.deleteItem = function(id){
+        $scope.contactList.splice(id, 1);
+        console.table($scope.contactList);
+    };
+        $scope.test = "true";
   });
