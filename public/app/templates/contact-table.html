@@ -10,10 +10,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="el in arr">
-        <td>{{el.firstName}}</td>
-        <td>{{el.lastName}}</td>
-        <td>{{el.email}}</td>
+      <tr class="contact-data" ng-repeat="el in arr">
+          <td><input type="text" value={{el.firstName}} /></td>
+          <td><input type="text" value={{el.lastName}} /></td>
+          <td><input type="text" value={{el.email}} /></td>
       </tr>
     </tbody>
   </table>

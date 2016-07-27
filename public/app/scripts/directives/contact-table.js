@@ -9,7 +9,6 @@ angular
         },
         templateUrl: '../../static/app/templates/contact-table.html',
         link: function(scope, element, attrs) {
-          console.log(scope.arr);
         }
     }
   });
