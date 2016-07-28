@@ -10,16 +10,11 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody class="contact-data" ng-repeat="el in contactList track by $index">
-      <tr id="{{$index}}">
-          <td><input type="text" value={{el.firstName}} /></td>
-          <td><input type="text" value={{el.lastName}} /></td>
-          <td><input type="text" value={{el.email}} /></td>
-          
-          <td><span class="glyphicon glyphicon-trash" ng-click="deleteItem($index)"></span></td>
+    <tbody class="contact-data">
+      <tr ng-repeat="contact in contactList.contact track by $index" ng-include="getTemplate(contact)">
+
       </tr>
     </tbody>
   </table>
 
 </div>
-

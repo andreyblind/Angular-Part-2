@@ -1,4 +1,4 @@
-'use strict';
+
 
 angular
   .module('contactListApp', [
@@ -8,7 +8,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/static/app/views/main.html',
+        templateUrl: '/app/views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })

@@ -1,18 +1,39 @@
 <!doctype html>
-<html ng-app="contactListApp">
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Angular contact list</title>
-    <link rel="stylesheet" href="static/app/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/app/css/custom.css">
+    <link rel="stylesheet" href="/app/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/css/custom.css">
 </head>
-<body>
+<script type="text/javascript" src="/app/lib/angular.min.js"></script>
+<script type="text/javascript" src="/app/lib/angular-route.min.js"></script>
+<script type="text/javascript" src="/app/app.js"></script>
+<script type="text/javascript" src="/app/scripts/controllers/MainCtrl.js"></script>
+<script type="text/javascript" src="/app/scripts/directives/contact-table.js"></script>
+<body ng-app="contactListApp">
 
+<script type="text/ng-template" id="display">
+          <td><input disabled type="text" value={{contact.firstName}} /></td>
+          <td><input disabled type="text" value={{contact.lastName}} /></td>
+          <td><input disabled type="text" value={{contact.email}} /></td>
+          <td>
+              <span class="glyphicon glyphicon-trash" ng-click="deleteItem($index)"></span>
+              <span class="glyphicon glyphicon-edit" ng-click="editItem($index)"></span>
+          </td>
+ </script>
+
+<script type="text/ng-template" id="edit">
+          <td><input type="text" value={{contact.firstName}} /></td>
+          <td><input type="text" value={{contact.lastName}} /></td>
+          <td><input type="text" value={{contact.email}} /></td>
+          <td>
+              <span class="glyphicon glyphicon-floppy-saved" ng-click="saveItem($index)"></span>
+              <button ng-click="test()">change</button>
+          </td>
+</script>
 <div ng-view=""></div>
-<script type="text/javascript" src="/static/app/lib/angular.min.js"></script>
-<script type="text/javascript" src="/static/app/lib/angular-route.min.js"></script>
-<script type="text/javascript" src="/static/app/app.js"></script>
-<script type="text/javascript" src="/static/app/scripts/controllers/MainCtrl.js"></script>
-<script type="text/javascript" src="/static/app/scripts/directives/contact-table.js"></script>
+
 </body>
 </html>
