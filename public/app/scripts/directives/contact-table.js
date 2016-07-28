@@ -35,9 +35,6 @@ angular
                 if (contact.id === scope.contactList.selected.id) return 'edit';
                 else return 'display';
             };
-            scope.test = function(){
-                scope.contactList.contact[0] = {id: 0, firstName: 'Пе', lastName: 'Шевч', email: 'p.shevchemko@gmail.com'};
-            }
         }
     }
   });

@@ -2,3 +2,6 @@
     border: none;
     background: white;
 }
+.glyphicon{
+    margin: 0 auto !important;
+}
