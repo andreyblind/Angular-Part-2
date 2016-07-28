@@ -13,16 +13,17 @@ angular
           bindToController: true,
 
         link: function(scope, element, attrs) {
+            (function(name) {
+                scope.contactList.selected = {};
+            })();
+
             scope.deleteItem = function(id){
               scope.contactList.contact.splice(id, 1);
             };
             scope.editItem = function(contact){
                 scope.contactList.selected = angular.copy(contact);
-                console.table(scope.contactList.selected);
             };
             scope.saveItem = function(id){
-
-                console.table(scope.contactList.selected);
                 scope.contactList.contact[id] = angular.copy(scope.contactList.selected);
                 scope.resetSelectedItem();
 

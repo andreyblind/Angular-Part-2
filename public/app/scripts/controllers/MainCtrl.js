@@ -14,6 +14,5 @@ angular
             {id: 6, firstName: 'Джон', lastName: 'Сноу', email: 'bastard@gmail.com'},
             {id: 7, firstName: 'Конор', lastName: 'Макгрегор', email: 'conor@ufc.com'}
         ],
-        selected: {}
     }
   });
