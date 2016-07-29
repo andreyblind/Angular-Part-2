@@ -10,9 +10,10 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-/*
+
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404',
+        templateUrl: '/app/views/404.html'
       });
-*/
+
   });
