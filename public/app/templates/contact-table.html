@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody class="contact-data">
-      <tr ng-repeat="contact in contactList.contact track by $index" ng-include="getTemplate(contact)">
+      <tr ng-repeat="contact in main.contactList.contact track by $index" ng-include="getTemplate(contact)">
 
       </tr>
     </tbody>
@@ -27,9 +27,9 @@
 </script>
 
 <script type="text/ng-template" id="edit">
-    <td><input type="text" ng-model="contactList.selected.firstName" /></td>
-    <td><input type="text" ng-model="contactList.selected.lastName" /></td>
-    <td><input type="text" ng-model="contactList.selected.email"/></td>
+    <td><input type="text" ng-model="main.contactList.selected.firstName" /></td>
+    <td><input type="text" ng-model="main.contactList.selected.lastName" /></td>
+    <td><input type="text" ng-model="main.contactList.selected.email"/></td>
     <td>
         <span class="glyphicon glyphicon-ok-sign" ng-click="saveItem($index)"></span>
         <span class="glyphicon glyphicon-remove-sign" ng-click="resetSelectedItem()"></span>

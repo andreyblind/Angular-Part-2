@@ -2,8 +2,8 @@
 
 angular
     .module('contactListApp')
-    .controller('MainCtrl', function ($scope){
-    $scope.contactList = {
+    .controller('MainCtrl', function (){
+    this.contactList = {
         contact:[
             {id: 0, firstName: 'Петр', lastName: 'Шевченко', email: 'p.shevchemko@gmail.com'},
             {id: 1, firstName: 'Иван', lastName: 'Чумак', email: 'chumak777@.iua'},

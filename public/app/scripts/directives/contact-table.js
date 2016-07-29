@@ -14,25 +14,24 @@ angular
 
         link: function(scope, element, attrs) {
             (function(name) {
-                scope.contactList.selected = {};
+                scope.main.contactList.selected = {};
             })();
 
             scope.deleteItem = function(id){
-              scope.contactList.contact.splice(id, 1);
+              scope.main.contactList.contact.splice(id, 1);
             };
             scope.editItem = function(contact){
-                scope.contactList.selected = angular.copy(contact);
+                scope.main.contactList.selected = angular.copy(contact);
             };
             scope.saveItem = function(id){
-                scope.contactList.contact[id] = angular.copy(scope.contactList.selected);
+                scope.main.contactList.contact[id] = angular.copy(scope.main.contactList.selected);
                 scope.resetSelectedItem();
-
             };
             scope.resetSelectedItem = function(){
-                scope.contactList.selected = {};
+                scope.main.contactList.selected = {};
             };
             scope.getTemplate = function (contact){
-                if (contact.id === scope.contactList.selected.id) return 'edit';
+                if (contact.id === scope.main.contactList.selected.id) return 'edit';
                 else return 'display';
             };
         }
