@@ -2,6 +2,9 @@
     border: none;
     background: white;
 }
-.glyphicon{
-    margin: 0 auto !important;
+input{
+    width: 100%;
+}
+span{
+    margin-left:7px;
 }
